@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>JavaScrip - Complex Objects</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <script>
+
+var pizzaOrders = [
+    {
+        "type": "margarita",
+        "size": "individual",
+        "price": 5.67,
+        "toppings": [
+            "extra-cheese",
+            "mushroom",
+            "pineapple"
+        ],
+        "to go": "true"
+    },
+
+    {
+        "type": "4 cheese",
+        "size": "familiar",
+        "price": 18.34,
+        "toppings": [
+        
+            "extra-chesse",
+            "onion-garlic"
+        ],
+        "to go": false
+    },
+
+    //Adding a new JavaScript Object. 
+    {
+        "type": "napolitana",
+        "size": "individual",
+        "price": 6.78,
+        "toppings": [],
+        "to go": true
+
+    }
+];
+
+console.log(pizzaOrders[0].type);
+console.log(pizzaOrders[0].toppings);
+console.log(pizzaOrders[1]["type"]);
+console.log(pizzaOrders[1].price);
+console.log(pizzaOrders[2].size);
+
+
+//Nested Objects:  
+var myRecipe = {
+    "description": "my favorite dessert",
+    "price": 15.6,
+    "ingredients": {
+        "masa": {
+            "flour": "100 grs",
+            "salt": "1 spoon",
+            "water": "1 cup"
+        },
+        
+        "coverage": {
+            "sugar": "120 grs",
+            "chocolate": "4 spoon",
+            "butter": "200 grs"
+        }
+        }
+
+    };
+
+    console.log(myRecipe.description);
+    console.log(myRecipe.price);
+    console.log(myRecipe.ingredients.masa["flour"]);
+    console.log(myRecipe.ingredients.masa["salt"]);
+    console.log(myRecipe.ingredients.masa["water"]);
+
+    //Aceesing the nested object created (coverage)
+    console.log(myRecipe.ingredients.coverage["sugar"]);
+    console.log(myRecipe.ingredients.coverage["chocolate"]);
+    console.log(myRecipe.ingredients.coverage["butter"]);
+
+
+//Nested Arrays.
+
+var myPlants = [
+
+{
+    "type": "flowers",
+    list: [
+        "roses",
+        "tulips",
+        "sunflowers"
+    ]
+},
+{
+    "type": "trees",
+    list: [
+        "oak",
+        "maple",
+        "pine"
+    ]
+}
+];
+
+var firstFlower = myPlants[0].list[0];
+console.log(firstFlower);
+
+var myTrees = myPlants[1].list[1];
+console.log(myTrees);
+
+
+//Record Collection
+
+
+
+
+
+
+    </script>
+
+
+    
+</body>
+</html>
